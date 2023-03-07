@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Smaple</title>
+    <link rel="icon" href="https://www.scaler.com/topics/images/form_tag_in_html-thumbnail.webp">
+</head>
+<body>
+    <form action="">
+        <table>
+            <caption>
+                <h2>General Admission Registation</h2>
+            </caption>
+            <tr>
+                <td valign="top" width="250px"></valign>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td><input type="text" placeholder="Firstname"></td>
+                                <td><input type="text" placeholder="Lastname"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td colspan="2"><input type="email" placeholder="sample@sample.com" required></td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td><input type="radio" name="general" checked> Male</td>
+                                <td><input type="radio" name="general">Female</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td colspan="2"><input type="tel"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Emergency Contact</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Do you require parking?</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="radio" checked>Yes</td>
+                                <td><input type="radio">No</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">What is your room preference?</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <input type="radio" name="preference" chaecked>Single room <br>
+                                    <input type="radio" name="preference">Shared room <br>
+                                    <input type="radio" name="preference">No room needed
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>                
+            <td width="250px">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Do you have dietary restriction?</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="radio" name="dietary" checked>None <br>
+                                <input type="radio" name="dietary" checked>Vegetarian <br>
+                                <input type="radio" name="dietary" checked>Glutten Allergy <br>
+                                <input type="radio" name="dietary" checked>Lactose Allergy <br>
+                                <input type="radio" name="dietary" checked>Nut Allergy <br>
+                                <input type="radio" name="dietary" checked>Shellfish Allergy
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">What activities will you attend?</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="radio" name="attend" checked> Awards gala dinner <br>
+                                <input type="radio" name="attend"> Luncheon <br>
+                                <input type="radio" name="attend"> Town hall
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> Do you want to see the list of other attendees and their profiles on the official event app?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" checked>Yes</td>
+                            <td><input type="radio">No</td>
+                        </tr>
+                    </tbody>
+                </table>
+</td>               
+            </tr>               
+        </table>
+    </form>      
+</body>
+</html>
