@@ -5,50 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký học viên</title>
+    <style>
+        #mauxanh{color: blue;}
+    </style>
 </head>
 <body>
     <form action="">
-        <table>
-            <thead>
-                <th><h2>ĐĂNG KÝ HỌC VIÊN</h2></th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Họ và tên</td>
-                    <td colspan="2"><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Ngày sinh</td>
-                    <td colspan="2"> <input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Giới tính</td>
-                    <td><input type="radio" checked>Nam</td>
-                    <td><input type="radio"> Nữ</td>
-                </tr>
-                <tr>
-                    <td rowspan="3" valign="top">Địa chỉ</td>
-                    <td rowspan="3"><input type="text" ></td>
-                </tr>
-                <tr>
-                    <td>Lớp</td>
-                    <td colspan="2"><select style="width: 50;"><option value="-chọn lớp-" name="lớp"></option></select></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td colspan="2"><input type="text" size="20"></td>
-                </tr>
-                <tr>
-                    <td>Điện thoại</td>
-                    <td colspan="2"><input type="text" size="20"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Đăng ký" size="20"></td>
-                    <td><input type="reset" value="Nhập lại" size="20"></td>
-                </tr>
-            </tbody>                
-        </table>
+            <table width="400px" style="background-color: yellow;">
+                <caption style="color: blue; background-color: aqua;"><h4 align="left">ĐĂNG KÝ HỌC VIÊN</h4></caption>
+                <tbody>
+                    <tr>
+                        <td id="mauxanh">Họ và tên</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td id="mauxanh">Ngày sinh</td>
+                        <td> <input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td id="mauxanh">Giới tính</td>
+                        <td><input type="radio" checked>Nam<input type="radio"> Nữ</td>
+                    </tr>
+                    <tr>
+                        <td id="mauxanh" valign="top">Địa chỉ</td>
+                        <td><textarea name="" id="" cols="30" rows="3"></textarea> </td>
+                    </tr>
+                    <tr>
+                        <td id="mauxanh">Lớp</td>
+                        <td>
+                            <select>
+                                <option value=""> -chọn lớp-</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="mauxanh">Email</td>
+                        <td><input type="email" required></td>
+                    </tr>
+                    <tr>
+                        <td id="mauxanh">Điện thoại</td>
+                        <td><input type="tel" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Đăng ký"> <input type="reset" value="Nhập lại" ></td>
+                    </tr>
+                </tbody>                
+            </table>
     </form>    
 </body>
 </html>
