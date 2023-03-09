@@ -5,40 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo Form Đơn Giản</title>
+    <style>
+        #xanh{color: blue;}
+        #red{color: red !important;}
+    </style>
 </head>
 <body>
     <form action="taoformdongian.html"></form>
     <table>
         <thead>
             <tr>
-                <th align="center" colspan="4">SỞ THÍCH CỦA BẠN</th>  
+                <th align="center" colspan="4" style="background-color: red; color: white;">SỞ THÍCH CỦA BẠN</th>  
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Họ và tên</td>
+                <td id="xanh">Họ và tên</td>
                 <td colspan="3"><input type="text"placeholder="Họ và tên" size="25px"></td>
             </tr>
             <tr>
-                <td>Email</td>
+                <td id="xanh">Email</td>
                 <td colspan="2"><input type="email" placeholder="sample@sample.com" size="15px" required></td>
                 <td></td>
             </tr>
             <tr>
-                <td>Sở thích</td>
-                <td><input type="checkbox" name="hobby">Thể thao</td>
-                <td><input type="checkbox"name="hobby">Âm nhạc</td>
-                <td><input type="checkbox"name="hobby">Đọc sách</td>                  
+                <td id="xanh">Sở thích</td>
+                <td id="red"><input type="checkbox" name="hobby">Thể thao</td>
+                <td id="red"><input type="checkbox"name="hobby">Âm nhạc</td>
+                <td id="red"><input type="checkbox"name="hobby">Đọc sách</td>                  
             </tr>
             <tr>
                 <td></td>
-                <td><input type="checkbox"name="hobby">Lướt web</td>
-                <td><input type="checkbox"name="hobby">Chơi game</td>
-                <td><input type="checkbox"name="hobby">Điện ảnh</td>                  
+                <td id="red"><input type="checkbox"name="hobby">Lướt web</td>
+                <td id="red"><input type="checkbox"name="hobby">Chơi game</td>
+                <td id="red"><input type="checkbox"name="hobby">Điện ảnh</td>                  
             </tr>
             <tr>
                 <td></td>
-                <td><input type="checkbox"name="hobby">Du lịch</td>
+                <td id="red"><input type="checkbox"name="hobby">Du lịch</td>
                 <td colspan="2"></td>                 
             </tr>
             <tr>
