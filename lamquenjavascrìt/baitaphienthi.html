@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI TẬP HIỂN THỊ "XIN CHÀO" VỚI JAVASCRIPT</title>
+</head>
+<body>
+    <div id="show"></div>
+   <button type="button" onclick="showtext()">Click me</button>
+   <!-- cách 1: <script>
+    function showtext(){
+        alert('Xin chào')
+    }
+   </script>-->
+   <!-- cách 2: <script>
+    function showtext(){
+        document.getElementById('show').innerHTML='Xin chào!'
+    }
+   </script>-->
+   <!-- cách 3: <script>
+    function showtext(){
+        document.write('Xin chào!')
+    }
+   </script>-->
+   <script>
+    function showtext(){
+        console.log('Xin chào!')
+    }
+   </script>
+
+</body>
+</html>
