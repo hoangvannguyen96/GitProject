@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr align="center">
+            <td>Amount</td>
+            <td>From curency</td>
+            <td>To curency</td>
+        </tr>
+        <tr>
+            <td><input id="giatridau" type="number"></td>
+            <td>
+                <select name="chuyen" id="tien" style="width: 100px;">
+                    <option value="VND">VND</option>
+                    <option value="$">$</option>
+                </select>
+            </td>
+            <td>
+                <select name="doi" id="te" style="width: 100px;">
+                    <option value="VND">VND</option>
+                    <option value="$">$</option>
+                </select>
+            </td>
+            <td><button onclick="chuyendoi()">Convert</button></td>
+        </tr>
+        <tr><td id="ketqua"></td></tr>
+    </table>
+    <script src="chuyendoitien.js"></script>
+</body>
+</html>
