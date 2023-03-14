@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập máy tính đơn giản</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="nhap1"></td>
+            <td colspan="2"><input type="number" id="nhap2"></td>
+        </tr>
+        <tr>
+            <td><button id="cong" onclick="cong()">Cộng (+)</button></td>
+            <td><button id="tru" onclick="tru()">Trừ (-)</button></td>
+            <td><button id="nhan" onclick="nhan()">Nhân (x)</button></td>
+            <td><button id="chia" onclick="chia()">Chia (/)</button></td>
+        </tr>
+        <tr><td id="ketqua"></td></tr>
+    </table>
+    <script>
+        function cong(){
+            let so1=document.getElementById('nhap1').value;
+            let so2=document.getElementById('nhap2').value;
+            let result;
+            result="Kết quả:" + (Number(so1)+Number(so2))
+            document.getElementById('ketqua').innerHTML=result;
+        }
+        function tru(){
+            let so1=document.getElementById('nhap1').value;
+            let so2=document.getElementById('nhap2').value;
+            let result;
+            result="Kết quả:" + (Number(so1)-Number(so2))
+            document.getElementById('ketqua').innerHTML=result;
+        }
+        function nhan(){
+            let so1=document.getElementById('nhap1').value;
+            let so2=document.getElementById('nhap2').value;
+            let result;
+            result="Kết quả:" + (Number(so1)*Number(so2)).toFixed(3)
+            document.getElementById('ketqua').innerHTML=result;
+        }
+        function chia(){
+            let so1=document.getElementById('nhap1').value;
+            let so2=document.getElementById('nhap2').value;
+            let result;
+            result="Kết quả:" + (Number(so1)/Number(so2)).toFixed(3)
+            document.getElementById('ketqua').innerHTML=result;
+        }
+    </script>
+</body>
+</html>
