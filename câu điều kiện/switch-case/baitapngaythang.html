@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="thang" style="width: 100px;">
+        <option name="month">1</option>
+        <option name="month">2</option>
+        <option name="month">3</option>
+        <option name="month">4</option>
+        <option name="month">5</option>
+        <option name="month">6</option>
+        <option name="month">7</option>
+        <option name="month">8</option>
+        <option name="month">9</option>
+        <option name="month">10</option>
+        <option name="month">11</option>
+        <option name="month">12</option>
+    </select>
+    <button id="tim" onclick="check()">Tìm</button>
+    <h3 id="in"></h3>
+    <script>
+        function check(){
+            let a=+document.getElementById('thang').value;
+        switch(a){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('in').innerText=('Tháng có 31 ngày')
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('in').innerText=('Tháng có 30 ngày')
+            break;
+            default:
+                document.getElementById('in').innerText=('Tháng có 28 ngày')
+        }
+        }   
+    </script>
+</body>
+</html>
