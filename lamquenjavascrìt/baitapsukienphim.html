@@ -6,26 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BÀI TẬP SỰ KIỆN PHÍM</title>
 </head>
-<body>
+<body onload="docReady()">
     <img id="nobita" src="https://cdn-amz.woka.io/images/I/71IaTqo6OlL.jpg" alt="nobita" style="position:absolute ; left: 0; top: 0; width: 160px; height: 300px;">
 <script>
-    function up(){
-        let up=document.getElementById('nobita');
-        up.style.top=parseint(up.style.top) - 5 + 'px';
+    function upArrowPressed(){
+        let move=document.getElementById('nobita');
+        move.style.top=parseInt(move.style.top) - 10 + 'px';
     }
-    function down(){
-        let down=document.getElementById('nobita');
-        down.style.down=parseint(up.style.top) + 5 + 'px';
+    function downArrowPressed(){
+        let move=document.getElementById('nobita');
+        move.style.top=parseInt(move.style.top) + 10 + 'px';
     }
-    function left(){
-        let left=document.getElementById('nobita');
-        left.style.left=parseint(up.style.top) - 5 + 'px';
+    function leftArrowPressed(){
+        let move=document.getElementById('nobita');
+        move.style.left=parseInt(move.style.left) - 10 + 'px';
     }
-    function right(){
-        let right=document.getElementById('nobita');
-        right.style.right=parseint(up.style.top) - 5 + 'px';
+    function rightArrowPressed(){
+        let move=document.getElementById('nobita');
+        move.style.left=parseInt(move.style.left) + 10 + 'px';
     }
-    
+    function moveSelection(evt) {
+    switch (evt.keyCode) {
+        case 37:
+            leftArrowPressed();
+            break;
+        case 39:
+            rightArrowPressed();
+            break;
+        case 38:
+            upArrowPressed();
+            break;
+        case 40:
+            downArrowPressed();
+            break;
+    }
+} 
+function docReady() {
+    window.addEventListener('keydown', moveSelection);
+}
 </script>
 </body>
 </html>
