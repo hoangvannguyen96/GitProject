@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td colspan="4"><input id='manhinh' type="text"></td>
+        </tr>
+        <tr>
+            <td><button value="1" onclick="nhan(this.value)">1</button></td>
+            <td><button value="2" onclick="nhan(this.value)">2</button></td>
+            <td><button value="3" onclick="nhan(this.value)">3</button></td>
+            <td><button value="+" onclick="nhan(this.value)">+</button></td>
+        </tr>
+        <tr>
+            <td><button value="4" onclick="nhan(this.value)">4</button></td>
+            <td><button value="5" onclick="nhan(this.value)">5</button></td>
+            <td><button value="6" onclick="nhan(this.value)">6</button></td>
+            <td><button value="-" onclick="nhan(this.value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button value="7" onclick="nhan(this.value)">7</button></td>
+            <td><button value="8" onclick="nhan(this.value)">8</button></td>
+            <td><button value="9" onclick="nhan(this.value)">9</button></td>
+            <td><button value="*" onclick="nhan(this.value)">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="xoa()">C</button></td>
+            <td><button value="0" onclick="nhan(this.value)">0</button></td>
+            <td><button onclick="tinh()">=</button></td>
+            <td><button value="/" onclick="nhan(this.value)">/</button></td>
+        </tr>       
+    </table>
+    <script>   
+        let a=document.getElementById('manhinh');  
+        function nhan(value){
+            a.value+=value;   
+        }
+        function tinh(){
+            let ketqua=eval(a.value);
+            a.value=ketqua;
+        }
+        function xoa(){
+            a.value="";
+        }
+    </script>
+</body>
+
+</html>
