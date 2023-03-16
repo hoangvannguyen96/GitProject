@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=+prompt('nhập điểm kiểm tra')
+        let b=+prompt('nhập điểm giữa kỳ')
+        let c=+prompt('nhập điểm cuối kỳ')
+        let avr=(a+b+c)/3
+        if(avr>=8&&avr<=10){
+            alert('xếp loại giỏi')
+        }else if(avr>=6.5&&avr<8){
+            alert('xếp loại khá')
+        }else if(avr>=5&&avr<6){
+            alert('xếp loại trung bình')
+        }else if(avr>=0&&avr<5){
+            alert('xếp loại yếu')
+        }else{
+            alert('vui lòng kiểm tra lại điểm nhập')
+        }
+    </script>
+</body>
+</html>

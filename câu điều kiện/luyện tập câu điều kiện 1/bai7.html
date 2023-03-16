@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let time=prompt('nhập thời gian đàm thoại trong tháng vừa rồi ?h')
+        let cuoc
+        if(time<=50){
+            cuoc=time*60*1000
+            alert('tổng tiền phải trả tháng này là' +cuoc+"VND")
+        }else if(time<=100){
+            cuoc=time*60*2000
+            alert('tổng tiền phải trả tháng này là' +cuoc+"VND")
+        }else{
+            cuoc=time*60*3000
+            alert('tổng tiền phải trả tháng này là' +cuoc+"VND")
+        }
+    </script>
+</body>
+</html>
