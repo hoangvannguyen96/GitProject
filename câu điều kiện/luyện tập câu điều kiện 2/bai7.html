@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=+prompt('nhập số a')
+        if(a==0){
+            let b=+prompt('nhập số b')
+            let c=+prompt('nhập số c')
+            if(b==0){
+            if(c==0){
+                document.write('phương trình có vô số nghiệm')
+            }else{
+                document.write('phương trình vô nghiệm')
+            }
+        }else{
+            if(c!=0){
+                let x=-c/b
+                document.write('giá trị của x là:'+x)
+            }else{
+                document.write('giá trị của x là:'+0)
+            }
+        }
+        }else{
+            let d=+prompt('nhập số d')
+            let e=+prompt('nhập số e')
+            let delta=(d*d)-(4*a*e)
+        let x1=(-d+Math.sqrt(delta))/2*a
+        let x2=(-d-Math.sqrt(delta))/2*a
+        let x3=-d/(2*a)
+        if(delta>0){
+            document.write('phương trình có 2 nghiệm là:')
+            document.write('<br/>')
+            document.write('x1='+x1)
+            document.write('<br/>')
+            document.write('x2='+x2)
+            document.write('<br/>')
+        }else if(delta<0){
+            document.write('phương trình vô nghiệm')
+        }else{
+            document.write('phương trình có nghiệm kép là:')
+            document.write('<br/>')
+            document.write('x1=x2='+x3)
+        }
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

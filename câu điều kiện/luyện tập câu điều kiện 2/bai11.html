@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=+prompt('nhập tổng thu nhập thực tế ?VND/tháng')
+        let b=+prompt('nhập số người phụ thuộc?')
+        let c=+prompt('nhập mức lương dùng để đóng bảo hiểm ?VND')
+        let d=a-11000000-b*4400000-c*0.105 
+        if(d<=0){
+            document.write('Bạn không thuộc diện phải đóng thuế TNCN')
+        }else if(d<=5){
+            let e=d*0.05
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }else if(d<=10){
+            let e=d*0.1-0.25
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }else if(d<=18){
+            let e=d*0.15-0.75
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }else if(d<=32){
+            let e=d*0.2-1.65
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }else if(d<=52){
+            let e=d*0.25-3.25
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }else if(d<=80){
+            let e=d*0.3-5.85
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }else{
+            let e=d*0.35-9.85
+            document.write('Thuế TNCN phải đóng là:'+e+'VND')
+        }  
+    </script>
+</body>
+</html>

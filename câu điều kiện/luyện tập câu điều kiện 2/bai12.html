@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let von=+prompt('nhập vốn gửi vào')
+        let thanggui=+prompt('nhập số tháng gửi')
+        let laithang=+prompt('nhập phần trăm lãi theo tháng ?0.05 ?0.06 ?0.075')
+        let laisaukygui;
+        switch(laithang){
+            case 0.05:
+            case 0.06:
+            case 0.075:
+                laisaukygui=(von*Math.pow((1+laithang),thanggui/12)).toFixed(2)
+                document.write('lãi sau'+thanggui+'tháng là:'+laisaukygui)
+            break;
+        }
+    </script>
+</body>
+</html>

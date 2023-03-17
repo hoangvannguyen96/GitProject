@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=+prompt('nhập số chỉ công tơ cũ')
+        let b=+prompt('nhập số chỉ công tơ mới')
+        let kwh=b-a
+        let cap1=kwh*1.484+kwh*1.484*0.1
+        let cap2=50*1.484+(kwh-50)*1.533+(50*1.484+(kwh-50)*1.533)*0.1
+        let cap3=50*1.484+50*1.533+(kwh-100)*1.786+(50*1.484+50*1.533+(kwh-100)*1.786)*0.1
+        if(kwh>=0&&kwh<=50){
+            document.write('tiền điện phải trả là:'+ cap1 +'VND')
+        }else if(kwh>=51&&kwh<=100){
+            document.write('tiền điện phải trả là:'+ cap2  +'VND')
+        }else{
+            document.write('tiền điện phải trả là:'+ cap3 +'VND')
+        }
+    </script>
+ 
+</body>
+</html>
