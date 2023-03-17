@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 500px;
+            margin: 0px auto;
+        }
+        table>tbody>tr>td>img{
+            width:100% ;
+            height:135px;
+        }
+        table>tbody>tr>td>img:hover{
+            box-shadow: 5px 5px 5px rgb(239, 49, 68);
+        }
+        .win{
+            box-shadow: 4px 4px 4px rgb(29, 183, 235);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td><img id="img1" src="img/1.1.jpg" onclick="change(1)"></td>
+            </tr>
+            <tr>
+                <td><img id="img2" src="img/2.3.jpg" onclick="change(2)"></td>
+            </tr>
+            <tr>
+                <td><img id="img3" src="img/3.1.jpg" onclick="change(3)"></td>
+            </tr>
+            <tr>
+                <td><img id="img4" src="img/4.3.jpg" onclick="change(4)"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const win1=	"http://127.0.0.1:5500/img/1.1.jpghttp://127.0.0.1:5500/img/2.1.jpghttp://127.0.0.1:5500/img/3.1.jpghttp://127.0.0.1:5500/img/4.1.jpg"
+        const win2="http://127.0.0.1:5500/img/1.2.jpghttp://127.0.0.1:5500/img/2.2.jpghttp://127.0.0.1:5500/img/3.2.jpghttp://127.0.0.1:5500/img/4.2.jpg"
+        const win3="http://127.0.0.1:5500/img/1.3.jpghttp://127.0.0.1:5500/img/2.3.jpghttp://127.0.0.1:5500/img/3.3.jpghttp://127.0.0.1:5500/img/4.3.jpg"
+        function change(row){
+            let m=Math.ceil(Math.random()*3)
+            let imgname=`${row}.${m}.jpg`
+            document.getElementById(`img${row}`).src=`img/${imgname}`
+            let check=document.getElementById('img1').src+
+                    document.getElementById('img2').src+
+                    document.getElementById('img3').src+
+                    document.getElementById('img4').src
+            if(check==win1||check==win2||check==win3){
+                document.getElementById('img1').classList.add('win')
+                document.getElementById('img2').classList.add('win')
+                document.getElementById('img3').classList.add('win')
+                document.getElementById('img4').classList.add('win')
+            }else{
+                document.getElementById('img1').classList.remove('win')
+                document.getElementById('img2').classList.remove('win')
+                document.getElementById('img3').classList.remove('win')
+                document.getElementById('img4').classList.remove('win')
+            }
+        }
+    </script>
+</body>
+</html>
