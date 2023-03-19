@@ -1,0 +1,47 @@
+    MẢNG
+- Việc sử dụng nhiều biến để lưu trữ khối lượng lớn giá trị là rất khó khăn và chiếm lượng lớn tài nguyên máy 
+=> mảng ra đời để giải quyết vấn đề
+- Định nghĩa mảng:
+    + Mảng là 1 biến đặc biệt, nó lưu trữ được nhiều giá trị
+    + Các giá trị trong mảng gọi là các phần tử và được lưu kế tiếp nhau trong bộ nhớ
+    + Tên mảng tuân thủ quy tắc đặt tên biến (bắt đầu bằng chữ cái không phải số, không chứa ký tự đặc biệt,...)
+    + Chỉ số của mảng là thứ tự các phần tử trong mảng, bắt đầu với thứ 0
+    + Độ dài mảng là số lượng phần tử ở trong mảng 
+
+- Khai báo mảng:
+    + Cách 1: let/var tên mảng = ["phần tử 1","phần tử 2",...]
+    + Cách 2: let/var tên mảng = new Array["phần tử 1","phần tử 2",...]
+
+- Chỉ số của mảng là một số nguyên dương, nếu mảng có độ dài là n thì chỉ số phần tử đầu tiên là 0 và phần tử 
+cuối là n-1
+
+- Ta có thể truy suất đến bất kỳ phần tử nào của mảng và có gán giá trị hoặc lấy giá trị của phần tử
+    + Để gán giá trị: tên mảng[chỉ số] = "giá trị cần gán"
+    + Để lấy giá trị: let/var name = tên mảng[chỉ số của phần tử cần lấy]
+
+- Thuộc tính: trả về độ dài của mảng bằng length
+    VD: let tên mảng = ["phần tử 1","phần tử 2",...]
+    document.write(tên mảng.length) ---> trả về độ dài của Mảng
+
+- Phương thức: thêm phần tử vào mảng bằng push
+    VD: let tên mảng = ["phần tử 1","phần tử 2",...]
+    tên mảng.push("phần tử cần thêm") ---> thêm phần tử mới vào mảng
+Hoặc cũng có thể thêm phần tử vào cuối mảng, như sau: 
+    VD: let tên mảng = ["phần tử 1","phần tử 2"] ---> mảng có 2 phần tử
+    tên mảng[tên mảng.length] = "phần tử cần thêm" ---> thêm phần tử vào vị trí cuối mảng
+
+- Duyệt mảng: thường sử dụng for hoặc for each
+    + Sử dụng for:
+        let/var tên mảng = ["phần tử 1","phần tử 2",...]
+        for(i=0;i<=tên mảng.length;i++){
+            text+=tên mảng.[i]+"<br/>"
+        }
+    => trả về phần tử 1
+              phần tử 2
+              ...
+    + Sử dụng for each:
+        let/var tên mảng = ["phần tử 1","phần tử 2",...]
+        tên mảng.forEach(function(item)){
+        document.write(item + "<br/>"")
+        }
+    

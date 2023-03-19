@@ -1,0 +1,46 @@
+	*câu lệnh if
+- chỉ gồm các câu lệnh if đơn lẻ
+if(){}
+if(){}
+....
+nếu đúng thì tại câu nào thì thực thi câu đó
+- gồm câu lệnh if và else
+if(){
+}
+else{
+if(){}
+}
+.....
+nếu đúng thì thực thi, không đúng thì xét tiếp qua điều kiện ngược lại với câu trên
+- gồm câu lệnh if và else if
+if(){
+}
+else if(){
+}
+else if(){
+}
+....
+nếu đúng thì thực thi, không đúng thì xét tiếp qua điều kiện ngược lại với câu trên
+	*câu lệnh switch - case
+switch(x){
+case x1:
+...;
+break;
+...
+case xn:
+...;
+break;
+default:
+...;
+break;
+}
+câu lệnh ngắn gọn, xét các trường hợp cụ thể
+giữa các case ngăn nhau bởi break để thoát từng switch case
+nếu không có lệnh break thì sẽ xét tiếp xuống câu lệnh liền sau
+default dùng để xét các trường hợp không có ở trong case
+	*câu lệnh ternary operator
+x1
+x2
+x1>x2? in ra: in ra
+? dùng để hỏi điều kiện, nếu đúng thì thực thi
+: dùng để chỉ trường hợp ngược lại, thực thi nếu sau ? điều kiện sai
