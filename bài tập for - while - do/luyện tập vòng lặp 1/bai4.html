@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=1
+        let y=1
+        let sum
+        while(true){
+            sum=x+y
+            if(sum%5==0){
+                document.write('số chia hết cho 5 đầu tiên trong dãy fibonaci là:' +sum)
+                break;
+            }
+            x=y
+            y=sum
+        }
+    </script>
+</body>
+</html>

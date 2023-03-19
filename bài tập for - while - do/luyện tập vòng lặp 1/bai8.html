@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">START</button>
+    <script>
+        function start(){
+            let a=+prompt('nhập vào khoảng số bạn muốn dự đoán?')
+            let count=0
+            let c=Math.ceil(Math.random()*a)
+        for(let i=0;i<=a;i++){
+            let b=+prompt('nhập vào một số mà bạn dự đoán?')
+            count++
+            if(b==c){
+                alert('xin chúc mừng')
+                break
+            }else if(b<c){
+                alert('số bạn cần đoán nhỏ hơn')
+            }else{
+                alert('số bạn cần đoán lớn hơn')
+            }
+            if(count>2){
+                alert('bạn hết số lần đoán')
+                break
+        }
+        }
+        } 
+    </script>
+</body>
+</html>
