@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=+prompt('nhập số tiền gửi')
+        let b=+prompt('nhập số tháng gửi')
+        let c=+prompt('nhập lại suất %')
+        let i=1
+        do{
+            sum=a+a*c
+            i++
+            a=sum
+        }while(i<=b)
+        document.write('số tiền sau'+b+'tháng gửi là:'+sum)
+    </script>
+</body>
+</html>

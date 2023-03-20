@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="img"></pre>
+    <script>
+        str=''
+        for(let i=0;i<7;i++){
+            for(let j=0; j<21;j++){
+                if(i==0||i==6){
+                    str+="*"
+                }else if(0==j||j==20){
+                    str+="*"
+                }else {
+                    str+=" "
+                }
+            }
+            str+='\n'
+        }
+        document.getElementById('img').innerText=str
+    </script>
+</body>
+</html>
