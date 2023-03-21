@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sample Screen</h1>
+    <input style="width: 200px;" id='nhap' type="text">
+    <button id="add" onclick="add()">Add</button>
+    <button id="display" onclick="display()">Display</button>
+    <p id="ketqua">Result:</p>
+    <script>
+        let array=Array()
+        let x=0
+        function add(){
+            array[x]=document.getElementById('nhap').value;
+            alert("Phần tử có giá trị ="+array[x]+"có chỉ số ="+x)
+            x++
+            document.getElementById('nhap').value=""
+        }
+        function display(){
+            let b="<hr/>"
+            for(let i=0;i<array.length;i++){
+                b+="Array["+i+"]"+"="+array[i]+"<br/>"
+            }
+            document.getElementById('ketqua').innerHTML=b
+        }
+    </script>
+</body>
+</html>
