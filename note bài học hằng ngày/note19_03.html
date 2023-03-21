@@ -15,6 +15,8 @@
 - Chỉ số của mảng là một số nguyên dương, nếu mảng có độ dài là n thì chỉ số phần tử đầu tiên là 0 và phần tử 
 cuối là n-1
 
+- Kiểm tra xem có phải mảng hay không sử dụng Array.isArray(tên mảng)
+
 - Ta có thể truy suất đến bất kỳ phần tử nào của mảng và có gán giá trị hoặc lấy giá trị của phần tử
     + Để gán giá trị: tên mảng[chỉ số] = "giá trị cần gán"
     + Để lấy giá trị: let/var name = tên mảng[chỉ số của phần tử cần lấy]
@@ -22,13 +24,6 @@ cuối là n-1
 - Thuộc tính: trả về độ dài của mảng bằng length
     VD: let tên mảng = ["phần tử 1","phần tử 2",...]
     document.write(tên mảng.length) ---> trả về độ dài của Mảng
-
-- Phương thức: thêm phần tử vào mảng bằng push
-    VD: let tên mảng = ["phần tử 1","phần tử 2",...]
-    tên mảng.push("phần tử cần thêm") ---> thêm phần tử mới vào mảng
-Hoặc cũng có thể thêm phần tử vào cuối mảng, như sau: 
-    VD: let tên mảng = ["phần tử 1","phần tử 2"] ---> mảng có 2 phần tử
-    tên mảng[tên mảng.length] = "phần tử cần thêm" ---> thêm phần tử vào vị trí cuối mảng
 
 - Duyệt mảng: thường sử dụng for hoặc for each
     + Sử dụng for:
@@ -39,9 +34,93 @@ Hoặc cũng có thể thêm phần tử vào cuối mảng, như sau:
     => trả về phần tử 1
               phần tử 2
               ...
-    + Sử dụng for each:
+    + Sử dụng forEach:
         let/var tên mảng = ["phần tử 1","phần tử 2",...]
         tên mảng.forEach(function(item)){
         document.write(item + "<br/>"")
         }
+
+- Làm việc với mảng:
+    + Hàm toString: chuyển mảng thành chuỗi
+        VD: var tên mảng = ["phantu1","phantu2"]
+        document.write(tên mảng.toString()) = phantu1,phantu2 ---> chuyển sang chuỗi
+
+    + Hàm join: chuyển mảng thành chuỗi
+        VD: var tên mảng = ["phantu1","phantu2"]
+        document.write(tên mảng.join()) = phantu1,phantu2 ---> chuyển sang chuỗi
+        document.write(tên mảng.join('')) = phantu1phantu2 ---> chuyển sang chuỗi
+        document.write(tên mảng.join(-)) = phantu1-phantu2 ---> chuyển sang chuỗi
+        document.write(tên mảng.join( - )) = phantu1 - phantu2 ---> chuyển sang chuỗi
+
+    + Hàm pop: xóa phần tử cuối mảng và trả về phần tử đã xóa
+        VD: var tên mảng = ["phantu1","phantu2"]
+        document.write(tên mảng.pop()) = phantu2 ---> xóa phần tử cuối mảng và trả về phần tử đã xóa
+
+    + Hàm push: thêm phần tử vào cuối mảng và trả về độ dài mới của mảng
+        VD: var tên mảng = ["phantu1","phantu2"]
+        tên mảng.push('phantu3') ---> thêm phần tử vào cuối mảng và trả về độ dài mới của mảng
+        ==> tên mảng = ["phantu1","phantu2","phantu3"]
+        tên mảng[tên mảng.length] = "phần tử cần thêm" ---> thêm phần tử vào vị trí cuối mảng
+
+    + Hàm shift: xóa phần tử đầu mảng và trả về phần tử đã xóa
+        VD: var tên mảng = ["phantu1","phantu2"]
+        document.write(tên mảng.shift()) = phantu1 ---> xóa phần tử đầu mảng và trả về phần tử đã xóa
+
+    + Hàm unShift: thêm phần tử vào đầu mảng và trả về độ dài mới của mảng
+        VD: var tên mảng = ["phantu1","phantu2"]
+        document.write(tên mảng.unShift('phantu3')) ---> thêm phần tử vào đầu mảng và trả về độ dài mới của mảng
+        ==> tên mảng = ["phantu3","phantu1","phantu2"]
+
+    + Hàm splice:
+        * Xóa phần tử trong mảng: 
+    tên mảng.splice(chỉ số nơi con trỏ chuột sẽ đứng, số phần tử muốn xóa sau dấu trỏ)
+            VD: var tên mảng = ["phantu1","phantu2","phantu3"]
+            tên mảng.splice(1, 1) --> xóa "phantu2" và trả về mảng tên mảng = ["phantu1","phantu3"]
+
+        * Thay thế hoặc thêm phần tử vào mảng:
+    tên mảng.splice(chỉ số nơi con trỏ chuột sẽ đứng, số phần tử muốn xóa sau dấu trỏ, "phần tử muốn thêm vào")
+            VD: var tên mảng = ["phantu1","phantu2","phantu3"]
+    tên mảng.splice(1, 1, "phantu4") 
+--> xóa "phantu2" sau đó chèn "phần tư 4 và trả về mảng tên mảng = ["phantu1","phantu4,"phantu3"]
+
+    + Hàm concat: hợp nhất các mảng lại thành mảng mới, mảng viết trước concat là mảng gốc muốn gộp thêm
+        VD: var tên mảng 1 = ["phantu1","phantu2","phantu3"]
+        VD: var tên mảng 2 = ["phantu4","phantu5"]
+        tên mảng 1.concat(tên mảng 2) 
+--> trả về mảng: tên mảng 1 = ["phantu1","phantu2","phantu3","phantu4","phantu5"]
+
+    + Hàm slice: cắt phần tử ở trong Mảng
+    tên mảng.slice(chỉ số nơi con trỏ chuột sẽ đứng, chỉ số phần tử cắt đến)
+        VD: var tên mảng = ["phantu1","phantu2","phantu3"]
+        tên mảng.slice(1,2) --> cắt phantu2 
+--> trả về mảng: tên mảng = ["phantu1","phantu3"]
+
+    + Hàm map(): tạo mảng mới với các thay đổi được định nghĩa trong function
+    VD: 
+    oldcourse=[{first name: nguyễn last name: a},
+                {first name: cao last name: b},
+                {first name: hồ last name: c},                
+            ]
+    <!-- let course = function(){
+
+    } -->
+    function course(){
+        return{
+            first name: course.first name
+            last name: `văn ${course.last name}
+        }
+    }
+    let newcourse = oldcourse.map(course)
+    <!-- let newcourse = oldcourse.map(function(){
+
+    }) -->
+==> trả về mảng mới newcourse=[{first name: nguyễn last name: văn a},
+                                {first name: cao last name: văn b},
+                                {first name: hồ last name: văn c},                
+]
+
+
+        
+
+
     
