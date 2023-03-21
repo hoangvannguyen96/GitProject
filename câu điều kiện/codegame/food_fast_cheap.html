@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="p1" onclick="change(1)" src="img/on.jpg" alt=""><br>
+    <img id="p2" onclick="change(2)" src="img/off.jpg" alt=""><br>
+    <img id="p3" onclick="change(3)" src="img/off.jpg" alt="">
+    <script>
+        const a="http://127.0.0.1:5500/img/on.jpg"
+        const b="http://127.0.0.1:5500/img/off.jpg"
+        function change(row){
+            let rd = Math.ceil(Math.random()*3)
+            let c=document.getElementById(`p${row}`)
+            while( rd==row) {
+                        rd = Math.ceil(Math.random()*3);
+                    }
+        // if(c.src.match("img/on.jpg")){
+        //     c.src = b;
+        // } else {
+        //     c.src = a;
+        // }
+        }
+        let d=document.getElementById('p1').src
+        let e=document.getElementById('p2').src
+        let f=document.getElementById('p3').src
+        if(d == a && e == a && f == a ){
+            c.src = b;
+        }
+    </script>
+</body>
+</html>
