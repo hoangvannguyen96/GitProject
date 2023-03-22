@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caro Game Simple</h1>
+    <p id="caro"></p>
+    <button onclick="tick()">Đánh</button>
+    <script>
+        let array=[]
+        for(let i=0;i<5;i++){
+            array[i]=[0,0,0,0,0]
+        }
+        // khai báo mảng
+        for(i=0;i<5;i++){
+            document.getElementById('caro').innerHTML+='<br/>'
+            for(let j=0;j<5;j++){
+                document.getElementById('caro').innerHTML+=`${array[i][j]} ` 
+        // tạo thêm khoảng hở cho giá trị trong mảng
+            }
+        }
+        function tick(){
+            let row=prompt('nhập vị trí dòng cần đánh')
+            let colum=prompt('nhập vị trí cột cần đánh')
+            array[row-1][colum-1]='x'
+            document.getElementById('caro').innerHTML=''
+        // đưa về mảng rỗng và cập nhập lại mảng mới với phần tử x vừa đánh
+            for(i=0;i<5;i++){
+            document.getElementById('caro').innerHTML+='<br/>'
+            for(let j=0;j<5;j++){
+                document.getElementById('caro').innerHTML+=`${array[i][j]} ` 
+            }
+        }
+        }
+    </script>
+</body>
+</html>

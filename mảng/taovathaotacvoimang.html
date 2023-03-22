@@ -13,20 +13,22 @@
     <button id="display" onclick="display()">Display</button>
     <p id="ketqua">Result:</p>
     <script>
-        let array=Array()
+        let array=[]
         let x=0
         function add(){
             array[x]=document.getElementById('nhap').value;
             alert("Phần tử có giá trị ="+array[x]+"có chỉ số ="+x)
             x++
+            // array.push(document.getElementById('nhap').value)
             document.getElementById('nhap').value=""
         }
+        
         function display(){
             let b="<hr/>"
             for(let i=0;i<array.length;i++){
                 b+="Array["+i+"]"+"="+array[i]+"<br/>"
             }
-            document.getElementById('ketqua').innerHTML=b
+            document.getElementById('ketqua').innerHTML=b+"["+array+"]"
         }
     </script>
 </body>
