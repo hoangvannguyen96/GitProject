@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function quickSortDescending(arr, left = 0, right = arr.length - 1) {
+            if (left >= right) {
+                return;
+            }
+
+            const pivotIndex = partitionDescending(arr, left, right);
+
+            quickSortDescending(arr, left, pivotIndex - 1);
+            quickSortDescending(arr, pivotIndex + 1, right);
+
+            return arr;
+        }
+
+        function partitionDescending(arr, left, right) {
+            const pivotValue = arr[right];
+            let pivotIndex = left;
+
+            for (let i = left; i < right; i++) {
+                if (arr[i] > pivotValue) {
+                    swap(arr, i, pivotIndex);
+                    pivotIndex++;
+                }
+            }
+
+            swap(arr, right, pivotIndex);
+            return pivotIndex;
+        }
+
+        function swap(arr, i, j) {
+            const temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        let arr=[5,29,27,30,55]
+        // console.log(quickSortDescending(arr));
+        console.log(partitionDescending(arr,0,arr.length));
+    </script>
+</body>
+
+</html>

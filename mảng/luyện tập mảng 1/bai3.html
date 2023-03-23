@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=[]
+        let sum=0
+        for(let i=0;i<10;i++){
+            array.push(Math.ceil((Math.random()*200)))}
+            let max=array[0]
+        for(let j=0;j<array.length;j++){
+            if(array[j]>max){
+                max=array[j]
+            }
+        }
+        for(let j=0;j<array.length;j++){
+            sum+=array[j]
+        }
+        let avr=sum/array.length       
+        document.write(array+'<br>')
+        document.write("phần tử lớn nhất mảng là:"+max+'<br>')
+        document.write('trung bình cộng các phần tử là:'+avr)
+    </script>
+</body>
+</html> 

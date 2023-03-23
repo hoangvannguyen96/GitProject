@@ -9,16 +9,19 @@
 <body>
     <script>
         let array=[]
-        let count=0
+        
         for(let i=0;i<10;i++){
-            array.push(Math.ceil((Math.random()*200)))
-            if(array[i]>=10){
-                count++
+            array.push(Math.ceil((Math.random()*200)))}
+            let max=array[0]
+            let index=0
+        for(let j=0;j<array.length;j++){
+            if(array[j]>max){
+                max=array[j]
+                index=j
             }
-        }
+        }        
         document.write(array)
-        document.write('<br>')
-        document.write('trong mảng trên có'+' '+count+' '+'phần tử lớn hơn 10')
+        document.write("phần tử lớn nhất mảng là:"+max+"ở vị trí"+index)
     </script>
 </body>
 </html> 

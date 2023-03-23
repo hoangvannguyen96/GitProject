@@ -12,7 +12,9 @@
         for(let i=1;i<=10;i++){
             sout+="<tr>"
                 for(let j=1;j<=10;j++){
-                    sout+="<td align='center'>"+j+'x'+i+'='+i*j+"</td>"
+                    sout+=<td align='center'>
+                        sout+=`${j}x${i}=${i*j}`
+                    sout+=</td>
             }
             sout+="</tr>"
         }

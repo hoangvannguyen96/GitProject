@@ -119,6 +119,39 @@ cuối là n-1
                                 {first name: hồ last name: văn c},                
 ]
 
+    + Hàm forEach: lặp qua từng phần tử của mảng theo thứ tự tăng dần mà không làm thay đổi kết cấu của mảng
+        * item
+            VD: 
+            const fruits = ["Apple", "Orange", "Banana", "Mango"]
+            fruits.forEach(function(fruit){
+                console.log(fruit);         
+                <!-- // Apple, Orange, Banna, Mango -->
+            })
+        * index
+            VD: 
+            const fruits = ["Apple", "Orange", "Banana", "Mango"]
+            fruits.forEach(function (fruit, index) {
+                console.log(fruit, "Vị trí " + index);
+            <!-- // Apple Vị trí 0
+                // Orange Vị trí 1
+                // Banner Vị trí 2
+                // Mango Vị trí 3 -->
+            })
+        * Array
+            VD:
+            const fruits = ["Apple", "Orange", "Banana", "Mango"]
+            fruits.forEach(function(fruit, index, array) {
+                console.log(array);
+                <!-- //  ["Apple", "Orange", "Banana", "Mango"] -->
+            })
+
+    + Hàm findIdex: sẽ trả về chỉ số của phần tử đầu tiên trong mảng, bỏ qua các phần tử còn lại. Nếu không tìm 
+    thấy nó trả về giá trị -1.
+            VD: 
+            let numbers = [23, 12, 55, 16, 28];
+            let index = numbers.findIndex((val) => val > 24);
+            console.log(index);  <!--2-->
+            
 
         
 

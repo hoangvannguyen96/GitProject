@@ -8,17 +8,22 @@
 </head>
 <body>
     <script>
-        let array=[]
-        let count=0
+        let array=[1,2,3,4,5]
+        let result
         for(let i=0;i<10;i++){
-            array.push(Math.ceil((Math.random()*200)))
-            if(array[i]>=10){
-                count++
-            }
+            array.push((Math.ceil((Math.random()*200)))+(Math.ceil((Math.random()*-200))))
         }
+            let count=0
+        for(let j=0;j<array.length;j++){
+            if(array[j]<0){
+                count++
+                result=count
+            }
+            }
+        // }
         document.write(array)
         document.write('<br>')
-        document.write('trong mảng trên có'+' '+count+' '+'phần tử lớn hơn 10')
+        document.write('trong mảng trên có'+' '+result+' '+'phần tử nhỏ hơn 0')
     </script>
 </body>
 </html> 
