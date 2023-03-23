@@ -1,0 +1,121 @@
+### Biến toàn cục:
+//----------------Biến toàn cục và biến cục bộ
+let total = 0;              // toàn cục: nằm ngoài
+function sum(start, end){       
+    let total = 0;          // cục bộ: nằm trong
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total;         
+}
+sum(1,3);
+
+### Quy tắt đặt tên hàm
+printMultiple("Hello")
+	+ bắt đầu bằng động từ, sau sau là danh từ
+	+ Bắt đầu bằng chữ cái thường,theo quy tắt lạc đà
+	+ Không bắt đầu bằng số, không chứa ký tự đặt biệt
+	+ Tên hàm thường có ý nghĩa gì đó
+
+### Thứ tự truyền đối số
+- Tuân thủ theo trật tự truyền tham số
+function printMultiple(message, n){	//message rồi tới n
+for (var i = 0; i < n; i++)
+console.log(message)
+}
+Gọi đúng: printMultiple("Hello", 4)	
+Gọi sai: printMultiple(4, "Hello")	//n rồi tới message
+
+let total = sum(1,10);      	    // 1,10: đối số - argument
+function sum(start, end){           // start, end: tham số - parameter
+    let total = 0;
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total;           	    // Return trả về giá trị
+}
+
+### Hãy nói về return 
+- là giá trị trả về khi hàm kết thúc quá trình thực thi
+- có thể có hoặc không
+- lưu ý vị trí đặt return
+
+function isEven(number){
+  console.log("isEven..........");
+  return number%2 == 0;                 //Nếu không return thì trả ra là unndefine
+}
+
+function myFunction(){
+    let count = 0;
+    let firstNum = 48;
+    return;			                    //return bỏ qua khai báo biến secondNum
+    var secondNum = 109;
+}
+### Hãy nói về tham số và gọi hàm
+- tham số là các biến khai báo trong hàm
+- tham số là các giá trị truyền vào biến của phương thức thực thi
+- gọi hàm bằng tên hàm và cặp dấu ngoặc (), nếu thiếu cặp dấu () có thể gây ra kết quả không mong muốn
+
+function sum(start, end){       
+    let total = 0;
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total; 
+let total = sum(1,10)	 //sum là hàm được gọi,trong()chứa 2 tham số
+
+### Let và var
+- let không cho phép khai báo lại, var thì cho phép khai báo lại
+
+if(1>0){
+    {
+        {
+            var total = 10;   //hoisting: trồi lên ra toàn cục
+        }
+    }
+    
+}
+console.log("total: " + total);
+
+if(1>0){
+let total = 10			        //let chỉ có giá trị trong blockcode
+}
+console.log("total: " + total);       
+
+### Truyền tham trị
+- gồm các kiểu: số nguyên, số thực, ký tự ,null,undefind,boolean
+- khi truyền tham trị thì biến sẽ lưu giá trị vào ô nhớ,khi gán biến đó bằng biến khác thì nó sẽ lưu giá trị 
+vào 1 ô nhớ khác. Các ô nhớ độc lập với nhau nên khi thay đổi giá trị 1 trong 2 biến thì biến kia không thay đổi.
+
+let a = 1;
+//Tạo ra biến a và lưu giá trị của a vào ô nhớ - 1 
+
+let b = a;
+//Tạo ra biến b, sao chép giá trị của biến a và lưu vào ô nhớ mới - 1
+
+a = 2;
+//Sửa giá trị của biến a và cập nhật lại ô nhớ - 2
+
+console.log(b) //1
+
+### Truyền tham chiếu
+- gồm các kiểu: mảng, hàm, đối tượng
+- khi truyền tham chiếu thì biến không lưu giá trị mà thực ra chỉ là lưu địa chỉ ô nhớ, khi gán cho biến khác 
+thì thực chất là gán địa chỉ ô nhớ chứ không phải gán giá trị. Cùng chung địa chỉ ô nhớ nên khi thay đổi giá 
+trị của biến này thì biến kia thay đổi theo.
+
+let a = { name: "cat" }
+//Tạo ra biến a, lưu giá trị của a vào ô nhớ và gán lại địa chỉ ô nhớ cho biến a (a = #a001)
+
+let b = a
+//Tạo ra biến b và gán giá trị của biến a cho b, ở đây chính là địa chỉ địa chỉ ô nhớ của a (b =#a001)
+
+a.name = "dog"
+//Sửa giá trị của biến a thì giá trị trong ô nhớ được cập nhật
+
+console.log(b) // { name: "dog" }
+
+### Viết hàm
+- đặt tên hàm
+- xác định các tham số
+- xem xét kết quả trả về
