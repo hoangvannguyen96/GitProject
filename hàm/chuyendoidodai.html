@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CONVERT TEMPERATURE</h1>
+    <table>
+        <tr>
+            <td>
+                <h3>From foot to metter <input type="number" oninput="footmetter(this.value)"></h3>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <h4 id="result1"></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>From metter to foot <input type="number" oninput="metterfoot(this.value)"></h3>
+            </td>
+        </tr>
+        <tr>
+            <td>            
+                <h4 id="result2"></h4>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function footmetter(meter){
+            let foot = 0.305 * meter
+            return document.getElementById('result1').innerHTML="Foot ="+" "+foot
+        }
+        function metterfoot(foot){
+            let metter = 3.279 * foot
+            return document.getElementById('result2').innerHTML="Metter ="+" "+metter
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        let b=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        let name=prompt('nhập tên cần tìm chòm sao')
+        function sea(x){
+            for(i=0;i<a.length;i++){
+                if(x==a[i]){
+                    return x+"thuộc chòm sao"+b[i];
+                    break;
+                }else{
+                    return x+"không thuộc chòm sao nào"
+                }
+                }  
+            }
+        document.write(sea(name))
+    </script>
+</body>
+</html>
