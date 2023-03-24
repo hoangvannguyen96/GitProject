@@ -1,0 +1,118 @@
+### Bi?n toàn c?c:
+//----------------Bi?n toàn c?c và bi?n c?c b?
+let total = 0;              // toàn c?c: n?m ngoài
+function sum(start, end){       
+    let total = 0;          // c?c b?: n?m trong
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total;         
+}
+sum(1,3);
+
+### Quy t?t ??t tên hàm
+printMultiple("Hello")
+	+ b?t ??u b?ng ??ng t?, sau sau là danh t?
+	+ B?t ??u b?ng ch? cái th??ng,theo quy t?t l?c ?à
+	+ Không b?t ??u b?ng s?, không ch?a ký t? ??t bi?t
+	+ Tên hàm th??ng có ý ngh?a gì ?ó
+
+### Th? t? truy?n ??i s?
+- Tuân th? theo tr?t t? truy?n tham s?
+function printMultiple(message, n){	//message r?i t?i n
+for (var i = 0; i < n; i++)
+console.log(message)
+}
+G?i ?úng: printMultiple("Hello", 4)	
+G?i sai: printMultiple(4, "Hello")	//n r?i t?i message
+
+let total = sum(1,10);      	// 1,10: ??i s? - argument
+function sum(start, end){       // start, end: tham s? - parameter
+    let total = 0;
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total;           	// Return tr? v? giá tr?
+}
+
+### Hãy nói v? return 
+- là giá tr? tr? v? khi hàm k?t thúc quá trình th?c thi
+- có th? có ho?c không
+- l?u ý v? trí ??t return
+
+function isEven(number){
+  console.log("isEven..........");
+  return number%2 == 0; //N?u không return thì tr? ra là unndefine
+}
+
+function myFunction(){
+    let count = 0;
+    let firstNum = 48;
+    return;			//return b? qua khai báo bi?n secondNum
+    var secondNum = 109;
+}
+### Hãy nói v? tham s? và g?i hàm
+- tham s? là các bi?n khai báo trong hàm
+- tham s? là các giá tr? truy?n vào bi?n c?a ph??ng th?c th?c thi
+- g?i hàm b?ng tên hàm và c?p d?u ngo?c (), n?u thi?u c?p d?u () có th? gây ra k?t qu? không mong mu?n
+
+function sum(start, end){       
+    let total = 0;
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total; 
+let total = sum(1,10)	 //sum là hàm ???c g?i,trong()ch?a 2 tham s?
+
+### Let và var
+- let không cho phép khai báo l?i, var thì cho phép khai báo l?i
+
+if(1>0){
+    {
+        {
+            var total = 10;   //hoisting: tr?i lên ra toàn c?c
+        }
+    }
+    
+}
+console.log("total: " + total);
+
+if(1>0){
+let total = 10			//let ch? có giá tr? trong blockcode
+}
+console.log("total: " + total);       
+
+### Truy?n tham tr?
+- g?m các ki?u: s? nguyên, s? th?c, ký t? ,null,undefind,boolean
+- khi truy?n tham tr? thì bi?n s? l?u giá tr? vào ô nh?,khi gán bi?n ?ó b?ng bi?n khác thì nó s? l?u giá tr? vào 1 ô nh? khác. Các ô nh? ??c l?p v?i nhau nên khi thay ??i giá tr? 1 trong 2 bi?n thì bi?n kia không thay ??i.
+
+let a = 1;
+//T?o ra bi?n a và l?u giá tr? c?a a vào ô nh? - 1 
+
+let b = a;
+//T?o ra bi?n b, sao chép giá tr? c?a bi?n a và l?u vào ô nh? m?i - 1
+
+a = 2;
+//S?a giá tr? c?a bi?n a và c?p nh?t l?i ô nh? - 2
+
+console.log(b) //1
+
+### Truy?n tham chi?u
+- g?m các ki?u: m?ng, hàm, ??i t??ng
+- khi truy?n tham chi?u thì bi?n không l?u giá tr? mà th?c ra ch? là l?u ??a ch? ô nh?, khi gán cho bi?n khác thì th?c ch?t là gán ??a ch? ô nh? ch? không ph?i gán giá tr?. Cùng chung ??a ch? ô nh? nên khi thay ??i giá tr? c?a bi?n này thì bi?n kia thay ??i theo.
+
+let a = { name: "cat" }
+//T?o ra bi?n a, l?u giá tr? c?a a vào ô nh? và gán l?i ??a ch? ô nh? cho bi?n a (a = #a001)
+
+let b = a
+//T?o ra bi?n b và gán giá tr? c?a bi?n a cho b, ? ?ây chính là ??a ch? ??a ch? ô nh? c?a a (b =#a001)
+
+a.name = "dog"
+//S?a giá tr? c?a bi?n a thì giá tr? trong ô nh? ???c c?p nh?t
+
+console.log(b) // { name: "dog" }
+
+### Vi?t hàm
+- ??t tên hàm
+- xác ??nh các tham s?
+- xem xét k?t qu? tr? v?
