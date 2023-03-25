@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[]
+        for(i=0;i<10;i++){
+            a.push(Math.ceil(Math.random()*100))
+        }
+        // let temp
+        // function rever(x){
+        //     for(i=0;i<x.length/2;i++){
+        //         temp=x[i]
+        //         x[i]=x[x.length-1-i]
+        //         x[x.length-i-1]=temp
+        //     }
+        // return x
+        // }
+
+        function rever(x){
+            for(i=0;i<x.length/2;i++){
+                [x[i], x[x.length - 1 - i]] = [x[x.length - 1 - i], x[i]]
+            }
+        return x
+        }
+        document.write(a+"<br>")
+        document.write(rever(a))
+    </script>
+</body>
+</html>

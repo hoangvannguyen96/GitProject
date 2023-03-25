@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = [1, "x", 23, "x", 3, 456, "y", "x", "yu"];
+      let b = prompt("nhập ký tự cần kiểm tra");
+      let count = 0;
+      let c;
+      function check(x, y) {
+        for (i = 0; i < x.length; i++) {
+          if (y == x[i]) {
+            count++;
+          }
+        }
+        if (count > 0) {
+          return y+" "+"xuất hiện trong mảng"+" "+"["+x+"]"+" "+count+" "+"lần"
+        } else {
+          return y+" "+" không nằm trong mảng"+" "+ x;
+        }
+      }
+      document.write(check(a, b));
+    </script>
+  </body>
+</html>

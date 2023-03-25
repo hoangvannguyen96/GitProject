@@ -11,17 +11,22 @@
         let a=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
         let b=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
         let name=prompt('nhập tên cần tìm chòm sao')
-        function sea(x){
-            for(i=0;i<a.length;i++){
-                if(x==a[i]){
-                    return x+"thuộc chòm sao"+b[i];
-                    break;
-                }else{
-                    return x+"không thuộc chòm sao nào"
-                }
-                }  
-            }
-        document.write(sea(name))
+        // let vitri = a.findIndex(a=>a == name) 
+        let vitri=a.indexOf(name)
+        vitri==-1?document.write('không thuộc chòm sao nào'):document.write(b[vitri])
+
+        
+        // function sea(x){
+        //     for(i=0;i<a.length;i++){
+        //         if(x==a[i]){
+        //             return x+"thuộc chòm sao"+b[i];
+        //             break
+        //         }else{
+        //             return x+"không thuộc chòm sao nào"
+        //         }
+        //         }  
+        //     }
+        // document.write(sea(name))
     </script>
 </body>
 </html>
