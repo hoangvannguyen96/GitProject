@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><h3>CARO GAME SIMPLE</h3></td>
+      </tr>
+      <tr>
+        <td>
+          <p id="check"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="tick()">Đánh</button>
+        </td>
+      </tr>
+    </table>
+    <script>
+      let a = [
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+      ];
+      for (let i = 0; i < 5; i++) {
+        document.getElementById("check").innerHTML += "<br>";
+        for (let j = 0; j < 5; j++) {
+          document.getElementById("check").innerHTML += a[i][j] + " ";
+        }
+      }
+      let go = 1;
+      function tick() {
+        let x = +prompt("nhập vào dòng cần đánh");
+        let y = +prompt("nhập vào cột cần đánh");
+        if (go % 2 != 0) {
+          a[x - 1][y - 1] = "x";
+        } else {
+          a[x - 1][y - 1] = "o";
+        }
+        go++;
+        document.getElementById("check").innerHTML = "";
+        for (let i = 0; i < 5; i++) {
+          document.getElementById("check").innerHTML += "<br>";
+          for (let j = 0; j < 5; j++) {
+            document.getElementById("check").innerHTML += a[i][j] + " ";
+          }
+        }
+        for (let i = 0; i < 5; i++) {
+          for (let j = 0; j < 5; j++) {
+            if (
+              (a[i][j] == "x" &&
+                a[i][j + 1] == "x" &&
+                a[i][j + 2] == "x" &&
+                a[i][j + 3] == "x" &&
+                a[i][j + 4] == "x") ||
+              (a[i][j] == "x" &&
+                a[i + 1][j] == "x" &&
+                a[i + 2][j] == "x" &&
+                a[i + 3][j] == "x" &&
+                a[i + 4][j] == "x")
+            ) {
+              alert("x thắng");
+            } else if (
+              (a[i][j] == "o" &&
+                a[i][j + 1] == "o" &&
+                a[i][j + 2] == "o" &&
+                a[i][j + 3] == "o" &&
+                a[i][j + 4] == "o") ||
+              (a[i][j] == "o" &&
+                a[i + 1][j] == "o" &&
+                a[i + 2][j] == "o" &&
+                a[i + 3][j] == "o" &&
+                a[i + 4][j] == "o")
+            ) {
+              alert("o thắng");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
