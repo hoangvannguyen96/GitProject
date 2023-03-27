@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = prompt("nhập chuỗi cần kiểm tra đối xứng");
+      function checkSymmetry(x) {
+        let b = [];
+        b = String(a).split("");
+        document.write(b+'<br>');
+        for (let i = 0; i < b.length/2; i++) {
+          if (b[i] == b[b.length-i-1]) {
+            return "chuỗi đối xứng";
+          } else {
+            return "chuỗi không đối xứng";
+          }
+        }
+      }
+      document.write(checkSymmetry(a));
+    </script>
+  </body>
+</html>

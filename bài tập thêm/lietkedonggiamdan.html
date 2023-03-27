@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let a = Array(4);
+      //   for (let i = 0; i < a.length; i++) {
+      //     document.write("<br>");
+      //     a[i] = Array(6);
+      //     for (let j = 0; j < a[i].length; j++) {
+      //       a[i][j] =
+      //         Math.ceil(Math.random() * 10) + Math.ceil(Math.random() * -10);
+      //     }
+      //     document.write(a[i]);
+      //   }
+      let a = [
+        [1, 2, 3],
+        [5, 4, 3],
+        [7, 6, 5],
+        [9, 6, 3],
+      ];
+      function descendingList(x) {
+        let a
+        for (let i = 0; i < x.length; i++) {
+            let check = true;
+          for (let j = 0; j < x[i].length - 1; j++) {
+            if (x[i][j] < x[i][j + 1]) {
+              check = false;
+              break;
+            }
+          }
+          if (check) {
+             a=document.write("dòng" + i + "của mảng là dòng giảm dần"+'<br>');
+          }
+        }
+        return a
+      }
+      descendingList(a)
+    </script>
+  </body>
+</html>

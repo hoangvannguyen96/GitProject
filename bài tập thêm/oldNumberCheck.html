@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = Array(4);
+      for (let i = 0; i < a.length; i++) {
+        document.write("<br>");
+        a[i] = Array(6);
+        for (let j = 0; j < a[i].length; j++) {
+          a[i][j] =
+            Math.ceil(Math.random() * 10) + Math.ceil(Math.random() * -10);
+        }
+        document.write(a[i]);
+      }
+      function oldNumberCheck(x) {
+        let check = false;
+        for (let i = 0; i < x.length; i++) {
+          for (let j = 0; j < x[i].length; j++) {
+            if (x[i][j] % 2 != 0) {
+              check = true;
+              break;
+            }
+          }
+        }
+        if (check) {
+          return "mảng có số lẻ";
+        } else {
+          return "mảng không có số lẻ";
+        }
+      }
+      document.write(oldNumberCheck(a));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = [1, 2, 3];
+      let b = [5, 3, 1, 4,8,2];
+      function check(x) {
+        let check = true;
+        let count=0
+        if (x.length > b.length) {
+          check = false;
+        } else {
+          for (let i = 0; i < x.length; i++) {
+            for (j = 0; j < b.length; j++) {
+              if (x[i] == b[j]) {
+                count++;
+                break;
+              }
+            }
+          }
+          if (count == a.length) {
+            check = true;
+          } else {
+            check = false;
+          }
+        }
+        if (check) {
+          return "a thuộc b";
+        } else {
+          return "a không thuộc b";
+        }
+      }
+      document.write(check(a));
+    </script>
+  </body>
+</html>

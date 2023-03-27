@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = Array(4);
+      for (let i = 0; i < a.length; i++) {
+        document.write("<br>");
+        a[i] = Array(5);
+        for (let j = 0; j < a[i].length; j++) {
+          a[i][j] =
+            Math.ceil(Math.random() * 10) + Math.ceil(Math.random() * -10);
+        }
+        document.write(a[i]);
+      }
+      document.write("<br>");
+      function oneColumPositive(x, y) {
+        let check = true;
+        for (let i = 0; i < x.length - 1; i++) {
+          if (x[i][y] < x[i + 1][y]) {
+            check = false;
+            break;
+          }
+        }
+        if (check) {
+          return "cột giảm dần";
+        } else {
+          return "cột không giảm dần";
+        }
+      }
+      document.write(oneColumPositive(a, 0));
+    </script>
+  </body>
+</html>

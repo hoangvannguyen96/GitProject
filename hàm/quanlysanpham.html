@@ -27,14 +27,14 @@
     
     <script>
         let dssanpham=['sony','samsung','nokia']
-        let d=dssanpham.length
-        document.getElementById('sl').innerText= 'số lượng'+" "+d
         function hienthisp(x){
             let b=''
             for(i=0;i<x.length;i++){
                 b+=  '<tr>'+'<td>'+ dssanpham[i]+'</td>'+'<td><button onclick="edit('+i+')">edit</button></td>'+'<td><button onclick="del('+i+')">delete</button></td>'+'</tr>'
             }
             document.getElementById('sp').innerHTML=b
+            let d=dssanpham.length
+            document.getElementById('sl').innerText= 'số lượng'+" "+d
         }
         hienthisp(dssanpham)
         function add(){

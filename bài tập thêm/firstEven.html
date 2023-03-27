@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = Array(5);
+      for (i = 0; i < a.length; i++) {
+        document.write("<br>");
+        a[i] = Array(4);
+        for (let j = 0; j < a[i].length; j++) {
+          a[i][j] =
+            Math.ceil(Math.random() * 10) + Math.ceil(Math.random() * -10);
+        }
+        document.write(a[i]);
+      }
+      document.write('<br>')
+      function firstEven(x) {
+        for (let i = 0; i < x.length; i++) {
+          for (let j = 0; j < x[i].length; j++) {
+            if (x[i][j] % 2 == 0) {
+              return x[i][j];
+              break;
+            }
+          }
+        }
+      }
+      document.write(firstEven(a));
+    </script>
+  </body>
+</html>
