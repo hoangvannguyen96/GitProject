@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><h4>Thêm sản phẩm</h4></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="spthem" type="text" style="width: 200px;"></td>
+            <td><button onclick="add()" style="background-color: green;">Thêm</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><h4>Danh sách sản phẩm</h4></td>
+        </tr>
+        <tr>
+            <td colspan="2"><h4>Tên sản phẩm</h4></td>
+            <td colspan="2" id="sl">Số lượng</td>
+        </tr>
+    <table id="sp">
+    </table>
+    
+    <script>
+        let dssanpham=['sony','samsung','nokia']
+        let d=dssanpham.length
+        document.getElementById('sl').innerText= 'số lượng'+" "+d
+        function hienthisp(x){
+            let b=''
+            for(i=0;i<x.length;i++){
+                b+=  '<tr>'+'<td>'+ dssanpham[i]+'</td>'+'<td><button onclick="edit('+i+')">edit</button></td>'+'<td><button onclick="del('+i+')">delete</button></td>'+'</tr>'
+            }
+            document.getElementById('sp').innerHTML=b
+        }
+        hienthisp(dssanpham)
+        function add(){
+            let c=document.getElementById('spthem').value
+            dssanpham.push(c)
+            hienthisp(dssanpham)
+        }
+        function del(index){
+            dssanpham.splice(index,1)
+            hienthisp(dssanpham)
+        }
+        function edit(index){
+            let a=prompt('nhập tên cần sửa')
+            dssanpham[index]=a
+            hienthisp(dssanpham)
+        }
+    </script>
+</body>
+</html>
