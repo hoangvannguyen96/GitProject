@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mobile{
+            constructor(battery){
+                this.battery=battery
+                this.sms=[]
+                this.smsinbox=[]
+                this.smssent=[]
+                this.status='on'
+            }
+            seeStatus(){
+                return this.status
+            }
+            setStatus(status){
+                return this.status
+            }
+            charge(){
+                return this.battery=100
+            }
+            message(mess){
+                if(this.status=='on'){
+                    this.battery--
+                    this.sms.push(mess)
+                    return mess
+                }
+            }
+            recievedSms(mess){
+                if(this.status=='on'){
+                    this.battery--
+                    this.smsinbox.push(mess)
+            }
+            }
+            sendotherphone(phone){
+                if(this.status=='on'){
+                    this.battery--
+                    phone.recievedSms(this.sms)
+                    return this.smssent.push(this.sms)                
+            }
+            }
+            seeRecievedSms(){
+                if(this.status=='on'){
+                    this.battery--
+                    return this.smsinbox
+            }
+            }
+            seeSentSms(){
+                if(this.status=='on'){
+                    this.battery--
+                    return this.smssent
+            }
+            }
+        }
+        let phone = new Mobile(90)
+        let phone1 =new Mobile(30)
+        document.write(phone.charge())
+        document.write(phone.message('hello'))
+        document.write(phone.sendotherphone(phone1))
+        document.write(phone1.smsinbox)
+    </script>
+</body>
+</html>
