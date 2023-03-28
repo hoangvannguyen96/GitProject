@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Battery {
+        constructor(energy) {
+          this.energy = energy;
+        }
+        getEnergy() {
+          return this.energy;
+        }
+        setEnergy(energy) {
+          return (this.energy = energy);
+        }
+        decreaseEnergy() {
+          if (this.energy > 0) {
+            this.energy--;
+          }
+        }
+      }
+      class FlashLamp {
+        constructor(battery) {
+          this.battery = battery;
+        }
+        getBatteryInfo() {
+          return this.battery.getEnergy();
+        }
+        setBattery(battery) {
+          return (this.battery = battery);
+        }
+        turnOn() {
+          if (this.battery.getEnergy() > 0) {
+            this.status = true;
+            this.battery.decreaseEnergy();
+            return "on";
+          } else {
+            return "off";
+          }
+          return (this.status = true);
+        }
+        turnOff() {
+          return (this.status = false);
+        }
+        light() {
+          if (this.status) {
+            alert("Lighting");
+          } else {
+            alert("Not lighting");
+          }
+        }
+      }
+
+      let battery = new Battery();
+      battery.setEnergy(60);
+
+      let lamp = new FlashLamp();
+      lamp.setBattery(battery);
+
+      document.write("battery info:" + lamp.getBatteryInfo() + "<br>");
+
+      document.write("Turn on" + "<br>");
+      lamp.light(lamp.turnOn());
+      document.write("battery info:" + lamp.getBatteryInfo() + "<br>");
+
+      document.write("Turn off" + "<br>");
+      lamp.light(lamp.turnOff());
+      document.write("battery info:" + lamp.getBatteryInfo() + "<br>");
+
+      document.write("Turn on" + "<br>");
+      lamp.light(lamp.turnOn());
+      document.write("battery info:" + lamp.getBatteryInfo() + "<br>");
+    </script>
+  </body>
+</html>
