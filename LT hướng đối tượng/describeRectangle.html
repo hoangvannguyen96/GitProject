@@ -7,7 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas id="rec" width="600" height="200"></canvas>
     <script>
+        let rec=document.getElementById('rec')
+        if(rec.getContext){
+            ctx=rec.getContext('2d')
+            ctx.fillStyle="rgb("+0+","+128+","+0+")"
+            ctx.fillRect(10,15,600,200)
+        }
         class Rectangle{
             constructor(width,height){
                 this.width=width
@@ -21,7 +28,7 @@
             }
         }
         let rec1=new Rectangle(3,8)
-        document.write(rec1.area()+'<br>'+rec1.primeter())
+        document.write('<br>'+rec1.area()+'<br>'+rec1.primeter())
     </script>
 </body>
 </html>
