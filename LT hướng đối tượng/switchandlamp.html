@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Switch{
+            constructor(status,lamp){
+                this.status=status
+                this.lamp=lamp
+            }
+            // connectToLamp(light){
+            //     return this.lamp = light;
+            // }
+            turnOn(){
+                this.lamp.status=true
+                return this.status=true
+            }
+            turnOff(){
+                this.lamp.status=false
+                return this.status=false
+            }
+        }
+        class Lamp{
+            constructor(status){
+                this.status=status
+            }
+            light(){
+                if(this.status){
+                    alert('đèn sáng')
+                }else{
+                    alert('đèn tắt')
+                }
+            }
+        }
+
+        let lamp1=new Lamp(true)
+        let but=new Switch(true,lamp1)
+        but.turnOn()
+        lamp1.light()
+        but.turnOff()
+        lamp1.light()
+        
+
+    </script>
+</body>
+</html>
