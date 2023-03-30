@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Apple {
+        constructor(weight) {
+          this.weight = weight;
+        }
+        decrease() {
+          this.weight--;
+        }
+        getWeight() {
+          return this.weight;
+        }
+      }
+      class Human {
+        constructor(name, gender, weight) {
+          this.name = name;
+          this.gender = gender;
+          this.weight = weight;
+        }
+        getName() {
+          return this.name;
+        }
+        setName(name) {
+          return (this.name = name);
+        }
+        getGender() {
+          return this.gender;
+        }
+        setGender(gender) {
+          return this.gender;
+        }
+        getWeight() {
+          return this.weight;
+        }
+        setWeight(weight) {
+          return this.weight;
+        }
+        eat(apple) {
+          if (apple.getWeight() > 0) {
+            apple.decrease();
+            this.weight++;
+          }else{
+            'táo đã hết'
+          }
+        }
+        checkApple(apple) {
+          return apple.getWeight();
+        }
+        say(message) {
+          return document.write(message) 
+        }
+      }
+
+      let apple = new Apple(10);
+      document.write(apple.getWeight() + "<br>");
+      let adam = new Human("adam", "male", 60);
+      document.write(adam.getName() + "<br>");
+      document.write(adam.getGender() + "<br>");
+      document.write(adam.getWeight() + "<br>");
+      adam.eat(apple)
+      document.write(apple.getWeight()+'<br>')
+      document.write(adam.getWeight()+'<br>')
+      document.write(adam.checkApple(apple)+'<br>')
+      adam.say('hello')
+    </script>
+  </body>
+</html>

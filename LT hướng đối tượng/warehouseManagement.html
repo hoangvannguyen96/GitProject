@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .banner {
+        width: 100%;
+        height: 150px;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+      }
+      .container-left {
+        margin-top:  75px;
+        text-align: center;
+        width: 15%;
+      }
+      .container-right {
+        margin: 10px;
+        width: 85%;
+      }
+      .container-right1 {
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      .container-left1 {
+        margin: 10px 0;
+      }
+      .container-right2 {
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+      }
+      .container-right2-1 {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
+      .container-right2-1-1 {
+        margin: 10px;
+      }
+      .container-right2-1-2 {
+        margin: 10px;
+      }
+      .container-right2-1-1-1 {
+        margin-bottom: 20px;
+        display: flex;
+      }
+      .container-right2-1-1-1 h4 {
+        margin-right: 10px;
+        width: 60px;
+        text-align: left;
+      }
+      .container-right2-1-2-1 {
+        margin-bottom: 20px;
+        display: flex;
+      }
+      .container-right2-1-2-1 h4 {
+        margin-right: 10px;
+        width: 120px;
+        text-align: left;
+      }
+      .container-right3 {
+        width: 95%;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      .add{
+        background-color: green;
+        border-radius: 3px;
+        color: white;
+        border: 0px solid;
+        width: 80px;
+      }
+      .menu{
+        color: white;
+        background-color: blue;
+        width: 100%;
+      }
+      .xe{
+        width: 100%;
+        color: white;
+        background-color: rgb(83, 228, 83);
+        border: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img class="banner" src="img/motorbanner.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="container-left">
+        <h2 class="container-left1 menu">MENU</h2>
+        <button class="container-left1 xe"><h3>XE SỐ</h3></button><br />
+        <button class="container-left1 xe"><h3>XE GA</h3></button><br />
+        <button class="container-left1 xe">
+          <h3>XE NHẬP KHẨU</h3>
+        </button>
+      </div>
+      <div class="container-right">
+        <div class="container-right1">
+          <h1>QUẢN LÝ NHẬP KHO</h1>
+        </div>
+        <div class="container-right2">
+          <div class="container-right2-1">
+            <div class="container-right2-1-1">
+              <div class="container-right2-1-1-1">
+                <h4>MS xe</h4>
+                <input type="text" />
+              </div>
+              <div class="container-right2-1-1-1">
+                <h4>Ảnh xe</h4>
+                <input type="text" />
+              </div>
+              <div class="container-right2-1-1-1">
+                <h4>Hãng xe</h4>
+                <input type="text" />
+              </div>
+              <div class="container-right2-1-1-1">
+                <h4>Đời xe</h4>
+                <input type="number" />
+              </div>
+            </div>
+            <div class="container-right2-1-2">
+              <div class="container-right2-1-2-1">
+                <h4>Tên xe</h4>
+                <input type="text" />
+              </div>
+              <div class="container-right2-1-2-1">
+                <h4>Màu xe</h4>
+                <input type="text" />
+              </div>
+              <div class="container-right2-1-2-1">
+                <h4>Ngày nhập kho</h4>
+                <input type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="container-right2-2">
+            <button class="add"><h3>Thêm vào</h3></button>
+          </div>
+        </div>
+        <div class="container-right3">
+          <h4>MS xe</h4>
+          <h4>Ảnh xe</h4>
+          <h4>Hãng xe</h4>
+          <h4>Đời xe</h4>
+          <h4>Tên xe</h4>
+          <h4>Màu xe</h4>
+          <h4>Ngày nhập kho</h4>
+          <h4>Tùy chọn</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
