@@ -16,10 +16,10 @@
       }
       document.write(a + "<br>");
       function asolutevalue(x) {
-        let b = [];
+        let b = '';
         for (i = 0; i < a.length; i++) {
           if (a[i] > Math.abs(a[i + 1])) {
-            b.push(a[i]);
+            b+=a[i]+" "
           }
         }
         return b;

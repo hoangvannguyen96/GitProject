@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = [];
+      for (let i = 0; i < 10; i++) {
+        a.push(
+          Math.ceil(Math.random() * 100) + Math.ceil(Math.random() * -100)
+        );
+      }
+      document.write(a + "<br>");
+      let count = 0;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] % 3 == 0) {
+          let temp = a[i];
+          a[i] = a[count];
+          a[count] = temp;
+          count++;
+        }
+      }
+      document.write(a);
+
+
+      // cách du học được
+      // let a = [9, 3, 7, 2, 6, 12, 15, 8, 21];
+      // document.write(a + "<br>");
+      // let i = 0;
+      // let j = 0;
+      // while (j < a.length) {
+      //   if (a[j] % 3 === 0) {
+      //     [a[i], a[j]] = [a[j], a[i]];
+      //     i++;
+      //   }
+      //   j++;
+      // }
+      // document.write(a);
+    </script>
+  </body>
+</html>
